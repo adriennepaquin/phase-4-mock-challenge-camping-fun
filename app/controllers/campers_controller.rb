@@ -8,7 +8,7 @@ class CampersController < ApplicationController
     def show
         camper = find_camper
         if camper
-            render json: camper, include: :activities
+            render json: camper
         else
             render json: { error: "Camper not found" }, status: :not_found
         end
